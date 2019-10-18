@@ -1,5 +1,3 @@
-#%% md
-
 # Word Embedding - Home Assigment
 ## Dr. Omri Allouche 2018. YData Deep Learning Course
 
@@ -21,8 +19,6 @@ Other recommended resources:
 - https://rare-technologies.com/word2vec-tutorial/
 - https://www.kaggle.com/pierremegret/gensim-word2vec-tutorial
 
-#%% md
-
 ### Train word vectors
 Train word vectors using the Skipgram Word2vec algorithm and the gensim package.
 Make sure you perform the following:
@@ -34,56 +30,24 @@ Make sure you perform the following:
 
 Use 300 as the dimension of the word vectors. Try different context sizes.
 
-#%%
-
-
-
-#%% md
-
 ### Review most similar words
 Get initial evaluation of the word vectors by analyzing the most similar words for a few interesting words in the text. 
 
 Choose words yourself, and find the most similar words to them.
-
-#%%
-
-
-
-#%% md
 
 ### Word Vectors Algebra
 We've seen in class examples of algebraic games on the word vectors (e.g. man - woman + king = queen ). 
 
 Try a few vector algebra terms, and evaluate how well they work. Try to use the Cosine distance and compare it to the Euclidean distance.
 
-#%%
-
-
-
-#%% md
-
 ## Sentiment Analysis
 Estimate sentiment of words using word vectors.  
 In this section, we'll use the SemEval-2015 English Twitter Sentiment Lexicon.  
 The lexicon was used as an official test set in the SemEval-2015 shared Task #10: Subtask E, and contains a polarity score for words in range -1 (negative) to 1 (positive) - http://saifmohammad.com/WebPages/SCL.html#OPP
 
-#%% md
-
 Build a classifier for the sentiment of a word given its word vector. Split the data to a train and test sets, and report the model performance on both sets.
 
-#%%
-
-
-
-#%% md
-
 Use your trained model from the previous question to predict the sentiment score of words in the lyrics corpus that are not part of the original sentiment dataset. Review the words with the highest positive and negative sentiment. Do the results make sense?
-
-#%%
-
-
-
-#%% md
 
 ### Visualize Word Vectors
 In this section, you'll plot words on a 2D grid based on their inner similarity. We'll use the tSNE transformation to reduce dimensions from 300 to 2. You can get sample code from https://www.kaggle.com/pierremegret/gensim-word2vec-tutorial or other tutorials online.
@@ -99,62 +63,23 @@ Perform the following:
 You might prefer to use a different number of points or a slightly different methodology for improved results.  
 Analyze the results.
 
-#%%
-
-
-
-#%% md
-
 ## Text Classification
 In this section, you'll build a text classifier, determining the genre of a song based on its lyrics.
-
-#%% md
 
 ### Text classification using Bag-of-Words
 Build a Naive Bayes classifier based on the bag of Words.  
 You will need to divide your dataset into a train and test sets.
 
-#%%
-
-
-
-#%% md
-
 Show the confusion matrix.
 
-#%%
-
-
-
-#%% md
-
 Show the classification report - precision, recall, f1 for each class.
-
-#%%
-
-
-
-#%% md
 
 ### Text classification using Word Vectors
 #### Average word vectors
 Do the same, using a classifier that averages the word vectors of words in the document.
 
-#%%
-
-
-
-#%% md
-
 #### TfIdf Weighting
 Do the same, using a classifier that averages the word vectors of words in the document, weighting each word by its TfIdf.
-
-
-#%%
-
-
-
-#%% md
 
 ### Text classification using ConvNet
 Do the same, using a ConvNet.  
@@ -166,14 +91,9 @@ Extra: Try training the ConvNet with 2 slight modifications:
 1. freezing the the weights trained using Word2vec (preventing it from updating)
 1. random initialization of the embedding layer
 
-#%% md
-
 You are encouraged to try this question on your own.  
 
 You might prefer to get ideas from the paper "Convolutional Neural Networks for Sentence Classification" (Kim 2014, [link](https://arxiv.org/abs/1408.5882)).
 
 There are several implementations of the paper code in PyTorch online (see for example [this repo](https://github.com/prakashpandey9/Text-Classification-Pytorch) for a PyTorch implementation of CNN and other architectures for text classification). If you get stuck, they might provide you with a reference for your own code.
-
-#%%
-
 
